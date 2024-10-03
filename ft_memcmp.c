@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:39:37 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/02 15:57:36 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:36:30 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-	const unsigned char *temps1;
-	const unsigned char *temps2;
+	size_t				i;
+	const unsigned char	*temps1;
+	const unsigned char	*temps2;
 
 	i = 0;
 	temps1 = s1;

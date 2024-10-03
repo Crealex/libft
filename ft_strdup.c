@@ -1,38 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 13:27:30 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 09:51:56 by atomasi          ###   ########.fr       */
+/*   Created: 2024/10/03 11:31:41 by atomasi           #+#    #+#             */
+/*   Updated: 2024/10/03 11:43:41 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stdlib.h>
+
+char 	*ft_strdup(const char *s1)
 {
-	int	i;
+	int i;
+	int l;
+	char *result;
 
 	i = 0;
-	while (s[i])
+	l = 0;
+	while(s1[l])
 	{
-		if (s[i] == c)
-		{
-			return ((char *)&s[i]);
-		}
+		l++;
+	}
+	result = malloc(sizeof(char) * l + 1);
+	if (result == NULL)
+		return (0);
+	while(s1[i])
+	{
+		result[i] = s1[i];
 		i++;
 	}
-	return (0);
+	result[i] = '\0';
+	return (result);
 }
-/*
-#include <string.h>
+
+/* #include <string.h>
 #include <stdio.h>
 
 int main()
 {
-	printf("La fonction officiel retoourne : %s\n",
-	 strchr("Test de la fonction", 't'));
-	printf("La fonction maison retoourne : %s\n",
-	ft_strchr("Test de la fonction", 't'));
-} */
+	char src[20] = "test de la fonction";
+
+	printf("La fonction officielle retourne : %s\n", strdup(src));
+	printf("La fonction maison retourne : %s\n", ft_strdup(src));
+}
+ */

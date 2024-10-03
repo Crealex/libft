@@ -6,27 +6,26 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:35:09 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/01 15:52:25 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:56:44 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	int i;
-	unsigned char *temp;
+	int				i;
+	unsigned char	*temp;
 
 	i = 0;
 	temp = s;
-	while(i < n)
+	while (i < n)
 	{
 		temp[i] = 0;
 		i++;
 	}
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -51,4 +50,4 @@ int main()
 	i++;
 	}
 
-}
+} */

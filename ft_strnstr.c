@@ -6,17 +6,17 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:59:14 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/02 16:41:17 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:50:11 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	int j;
-	int lj;
+	size_t	i;
+	int		j;
+	int		lj;
 
 	i = 0;
 	j = 0;
@@ -24,7 +24,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (needle[lj])
 		lj++;
 	if (!needle[i])
-		return((char *)&haystack[i]);
+		return ((char *)&haystack[i]);
 	while (haystack[i] && i < len)
 	{
 		if (needle[j] == haystack[i])
@@ -47,7 +47,9 @@ int main()
 	size_t nb;
 
 	nb = 20;
-	printf("La fonction officiel retourne : %s\n", strnstr("Test de la fonction", "fon", nb));
-	printf("La fonction maison retourne : %s\n", ft_strnstr("Test de la fonction", "fon", nb));
+	printf("La fonction officiel retourne : %s\n",
+	strnstr("Test de la fonction", "fon", nb));
+	printf("La fonction maison retourne : %s\n",
+	ft_strnstr("Test de la fonction", "fon", nb));
 }
  */

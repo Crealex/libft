@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 17:21:20 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/02 21:26:54 by alexandre        ###   ########.fr       */
+/*   Updated: 2024/10/03 10:57:54 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(const char *str)
 
 int main()
 {
-	char *text = "    -2147483648";
+	char *text = "-21474836489";
 
 	printf("Test de la fonction officielle : %d\n", atoi(text));
 	printf("Test de la fonction maison : %d\n", ft_atoi(text));

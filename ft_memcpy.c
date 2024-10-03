@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:53:24 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/01 17:37:34 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:55:49 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	unsigned char *tempdest;
-	const unsigned char *tempsrc;
+	size_t				i;
+	unsigned char		*tempdest;
+	const unsigned char	*tempsrc;
 
 	i = 0;
 	tempdest = dst;
 	tempsrc = src;
-	while(i < n)
+	while (i < n)
 	{
 		tempdest[i] = tempsrc[i];
 		i++;

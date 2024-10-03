@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 13:27:30 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 09:51:56 by atomasi          ###   ########.fr       */
+/*   Created: 2024/10/03 10:08:24 by atomasi           #+#    #+#             */
+/*   Updated: 2024/10/03 11:31:19 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+#include <stdlib.h>
 
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			return ((char *)&s[i]);
-		}
-		i++;
-	}
-	return (0);
+void	*ft_calloc(size_t count, size_t size)
+{
+	int		*tab;
+	size_t	i;
+
+	 tab = malloc(size * count);
+	 i = 0;
+	 if (tab == NULL)
+	 	return (0);
+	 while (i < count)
+	 {
+		 tab[i] = 0;
+		 i++;
+	 }
+	 return ((void *)tab);
 }
 /*
-#include <string.h>
 #include <stdio.h>
 
 int main()
 {
-	printf("La fonction officiel retoourne : %s\n",
-	 strchr("Test de la fonction", 't'));
-	printf("La fonction maison retoourne : %s\n",
-	ft_strchr("Test de la fonction", 't'));
-} */
+	size_t nmemb = 4;
+	size_t size = 5;
+	printf("la fonction officiel retourne : %p\n",(int *)calloc(nmemb, size));
+	printf("la fonction maison retourne : %p\n",(int *)ft_calloc(nmemb, size));
+}
+ */

@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:34:35 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/02 15:38:03 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:57:06 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	const unsigned char *temp;
+	size_t				i;
+	const unsigned char	*temp;
 
 	i = 0;
 	temp = s;
@@ -37,7 +37,9 @@ int main()
 	size_t nb;
 
 	nb = 12;
-	printf("La fonction officiel retoourne : %s\n", memchr("Test de la fonction", 'o', nb));
-	printf("La fonction maison retoourne : %s\n", ft_memchr("Test de la fonction", 'o', nb));
+	printf("La fonction officiel retoourne : %s\n",
+	 memchr("Test de la fonction", 'o', nb));
+	printf("La fonction maison retoourne : %s\n",
+	ft_memchr("Test de la fonction", 'o', nb));
 }
  */

@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:35:53 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/02 10:32:33 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:39:54 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,11 @@ int main()
 	const char src2[20] = "Je teste ma fonction";
 	char dest2[20];
 	size_t nb = 0;
-	printf("la valeur retournee par la fonction officiel est : %lu\n", strlcpy(dest, src, nb));
+	printf("la valeur retournee par la fonction officiel est :
+	 %lu\n", strlcpy(dest, src, nb));
 	printf("La chaine copie est : %s\n", dest);
-	printf("la valeur retournee par la fonction maison est : %lu\n", ft_strlcpy(dest2, src2, nb));
+	printf("la valeur retournee par la fonction maison est :
+	 %lu\n", ft_strlcpy(dest2, src2, nb));
 	printf("La chaine copie est : %s\n", dest2);
 }
  */

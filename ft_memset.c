@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:10 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/01 15:25:40 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:50:59 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int i;
-	unsigned char *temp;
+	unsigned int	i;
+	unsigned char	*temp;
 
-	i =0;
+	i = 0;
 	temp = s;
 	while (i < n)
 	{

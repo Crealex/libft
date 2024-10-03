@@ -6,18 +6,18 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:38:18 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/01 17:57:53 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:57:38 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove (void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	const unsigned char *tempsrc;
-	unsigned char *tempdst;
-	unsigned char temp[n];
+	size_t				i;
+	const unsigned char	*tempsrc;
+	unsigned char		*tempdst;
+	unsigned char		temp[n];
 
 	i = 0;
 	tempdst = dst;
@@ -36,7 +36,7 @@ void	*ft_memmove (void *dst, const void *src, size_t n)
 	tempdst[i] = '\0';
 	return (dst);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -48,3 +48,4 @@ int main()
 	printf("Resultat : %s\n", ft_memmove(dest, src, nb));
 	printf("Resultat : %s\n", memmove(dest, src, nb));
 }
+ */
