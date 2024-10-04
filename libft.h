@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 13:41:10 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 23:38:13 by alexandre        ###   ########.fr       */
+/*   Created: 2024/10/04 23:25:47 by alexandre         #+#    #+#             */
+/*   Updated: 2024/10/04 23:34:35 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlen(const char *s)
-{
-	int	i;
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
-/*
-#include <stdio.h>
+int	ft_atoi(const char *str);
+void	ft_bzero(void *s, size_t n);
 
-int main ()
-{
-	char *text = "42 c cool";
-	printf("Test du mot %s avec la fonction officiel :
-	 %lu\n", text, strlen(text));
-	printf("Test du mot %s avec la fonction maison :
-	%zu\n", text, ft_strlen(text));
-}
- */
+#endif

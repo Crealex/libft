@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:42:16 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 13:05:05 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/04 23:35:36 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int main()
 	start = 4;
 	len = 20;
 	//printf("Le retour de la fonction officel est : %s", substr(s, start, len));
-	printf("Le retour de la fonction officel est : %s", ft_substr(s, start, len));
+	printf("Le retour de la fonction oficel est : %s", ft_substr(s, start, len));
 
 } */
