@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:31:19 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 14:45:59 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/07 21:08:29 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

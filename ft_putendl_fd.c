@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 15:04:48 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 15:09:01 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/07 22:00:46 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -20,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }
