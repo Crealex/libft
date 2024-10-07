@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:15:41 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/07 15:08:24 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/07 19:11:55 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -23,4 +25,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (temp);
 }
- 
