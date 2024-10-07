@@ -10,7 +10,12 @@ SRCS 	=	ft_atoi.c ft_bzero.c ft_calloc.c \
 			ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 			ft_strtrim.c ft_substr.c ft_tolower.c \
 			ft_toupper.c
+SRCSB	=	ft_lstadd_back.c ft_lstadd_front.c \
+			ft_lstclear.c ft_lstdelone.c \
+			ft_lstiter.c ft_last.c ft_lstmap.c \
+			ft_lstnew.c ft_lstsize.c
 OBJS	= ${SRCS:.c=.o}
+OBJSB	= ${SRCSB:.c=.o}
 CFLAGS	= -Wall -Werror -Wextra
 CC		= gcc
 NAME	= libft.a
@@ -28,5 +33,8 @@ fclean:	clean
 	rm -f ${NAME}
 
 re:	fclean all
+
+bonus: ${OBJSB}
+	${AR} ${NAME} ${OBJSB}
 
 .PHONY: all clean fclean re
