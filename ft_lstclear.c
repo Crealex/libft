@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:57:57 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/07 21:06:05 by alexandre        ###   ########.fr       */
+/*   Updated: 2024/10/08 10:33:20 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while ((*lst)->next != NULL)
 	{
 		temp = (*lst)->next;
-		lstdelone(*lst, del);
+		ft_lstdelone(*lst, del);
 		*lst = temp;
 	}
 	*lst = NULL;

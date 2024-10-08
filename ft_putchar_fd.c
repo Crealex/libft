@@ -6,11 +6,11 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:47:40 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 14:50:12 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 10:12:03 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

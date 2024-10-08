@@ -6,13 +6,13 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 12:13:06 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 14:46:17 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 10:18:04 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	len(const char *s)
+static int	len(const char *s)
 {
 	int	i;
 

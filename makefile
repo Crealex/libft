@@ -13,7 +13,7 @@ SRCS 	=	ft_atoi.c ft_bzero.c ft_calloc.c \
 
 SRCSB	=	ft_lstadd_back.c ft_lstadd_front.c \
 			ft_lstclear.c ft_lstdelone.c \
-			ft_lstiter.c ft_last.c ft_lstmap.c \
+			ft_lstiter.c ft_lstlast.c ft_lstmap.c \
 			ft_lstnew.c ft_lstsize.c
 OBJS	= ${SRCS:%.c=${OBJDIR}/%.o}
 OBJSB	=  ${SRCSB:%.c=${OBJDIR}/%.o}

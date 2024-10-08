@@ -6,87 +6,42 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:29:19 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 15:32:39 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 17:09:44 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	countsetfront(char const *s1, const char *set)
+static int	is_in_set(char c, const char *set)
 {
-	int	i;
-	int	iset;
-	int	count;
-
-	i = 0;
-	iset = 0;
-	count = 0;
-	while (set[iset])
+	while (*set)
 	{
-		if (s1[i] == set[iset])
-		{
-			i++;
-			count++;
-			iset = 0;
-		}
-		else
-			iset++;
+		if (c == *set++)
+			return (1);
 	}
-	return (count);
-}
-
-int	countsetback(char const *s1, const char *set)
-{
-	int	i;
-	int	iset;
-	int	count;
-
-	i = 0;
-	iset = 0;
-	count = 0;
-	while (s1[i])
-	{
-		i++;
-	}
-	i--;
-	while (set[iset])
-	{
-		if (s1[i] == set[iset])
-		{
-			i--;
-			count++;
-			iset = 0;
-		}
-		else
-			iset++;
-	}
-	return (count);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 	char	*res;
-	int		back;
-	int		ires;
-	int		count;
 
-	i = 0;
-	back = countsetback(s1, set);
-	ires = 0;
-	count = 0;
-	while (s1[count])
-		count++;
-	res = malloc(sizeof(char) * (count - (countsetfront(s1, set) + back)));
-	if (res == NULL)
-		return (0);
-	i = countsetfront(s1, set);
-	while (s1[i] && i < (count - back))
-	{
-		res[ires] = s1[i];
-		i++;
-		ires++;
-	}
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && is_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && is_in_set(s1[end - 1], set))
+		end--;
+	len = end - start;
+	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, s1 + start, len + 1);
 	return (res);
 }
 

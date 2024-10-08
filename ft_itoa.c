@@ -6,13 +6,13 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:50:33 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 12:12:10 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 10:21:13 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	len(int n)
+static int	len(int n)
 {
 	int	nb;
 	int	res;

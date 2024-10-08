@@ -6,13 +6,13 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:34:06 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/04 11:06:59 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 17:34:28 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	fill(char **res, const char *s, char c)
+static void	fill(char **res, const char *s, char c)
 {
 	int	i;
 	int	jres;
@@ -27,6 +27,7 @@ void	fill(char **res, const char *s, char c)
 	{
 		if (s[i] == c)
 		{
+			res[ires][jres] = '\0';
 			ires++;
 			jres = 0;
 		}
@@ -39,7 +40,7 @@ void	fill(char **res, const char *s, char c)
 	res[ires] = NULL;
 }
 
-int	malloc_words(char **res, const char *s, char c)
+static int	malloc_words(char **res, const char *s, char c)
 {
 	int	word;
 	int	countl;
@@ -57,7 +58,8 @@ int	malloc_words(char **res, const char *s, char c)
 			countl++;
 			i++;
 		}
-		res[word] = malloc(sizeof(char) * countl + 1);
+		if (countl == 0)
+			res[word] = malloc(sizeof(char) * countl + 1);
 		if (res[word] == NULL)
 			return (0);
 		word++;
@@ -65,7 +67,7 @@ int	malloc_words(char **res, const char *s, char c)
 	return (1);
 }
 
-int	counterc(char const *s, char c)
+static int	counterc(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -74,7 +76,7 @@ int	counterc(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c && s[i + 1] != c)
 			count++;
 		i++;
 	}
@@ -85,7 +87,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 
-	res = malloc(sizeof(char *) * counterc(s, c) + 1);
+	res = malloc(sizeof(char *) * (counterc(s, c) + 1));
 	if (res == NULL || !malloc_words(res, s, c))
 		return (0);
 	fill(res, s, c);

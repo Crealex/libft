@@ -6,11 +6,11 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:53:24 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 09:55:49 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:36:01 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -26,17 +26,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		tempdest[i] = tempsrc[i];
 		i++;
 	}
-	tempdest[i] = '\0';
 	return (dst);
 }
 /*
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
 	unsigned char dest[20];
-	const unsigned char src[20] = "Je teste ma fonction";
-	size_t nb = 6;
+	const unsigned char src[26] = "zyxwvutsrqponmlkjihgfedcba";
+	size_t nb =14;
 	unsigned int tabsrc[6] = {69, 70, 71, 72, 73, 74};
 	unsigned int tabdst[6];
 
@@ -44,4 +44,5 @@ int main()
 	printf("le resultat : %s\n", memcpy(dest, src, nb));
 	printf("le resultat : %s\n", ft_memcpy(tabdst, tabsrc, nb));
 	printf("le resultat : %s\n", memcpy(tabdst, tabsrc, nb));
-} */
+}
+ */

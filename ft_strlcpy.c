@@ -6,11 +6,11 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:35:53 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 09:39:54 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:54:47 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -25,7 +25,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	if (dstsize == 0)
 	{
-		dst[i] = '\0';
 		return (result);
 	}
 	while (src[i] && i < (dstsize - 1))
