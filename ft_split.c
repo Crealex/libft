@@ -3,43 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:34:06 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 17:34:28 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/08 22:52:04 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	fill(char **res, const char *s, char c)
+// Compte le nombre de mots dans la chaîne `s` séparés par le délimiteur `c`
+static int	counterc(char const *s, char c)
 {
+	int	count;
 	int	i;
-	int	jres;
-	int	ires;
 
 	i = 0;
-	jres = 0;
-	ires = 0;
-	while (s[i] == c)
-		i++;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-		{
-			res[ires][jres] = '\0';
-			ires++;
-			jres = 0;
-		}
 		while (s[i] == c)
 			i++;
-		res[ires][jres] = s[i];
-		jres++;
-		i++;
+		if (s[i] != '\0')
+		{
+			count++;
+			while (s[i] != c && s[i])
+				i++;
+		}
 	}
-	res[ires] = NULL;
+	return (count);
 }
 
+// Alloue la mémoire pour chaque mot trouvé dans la chaîne `s`
 static int	malloc_words(char **res, const char *s, char c)
 {
 	int	word;
@@ -58,39 +53,72 @@ static int	malloc_words(char **res, const char *s, char c)
 			countl++;
 			i++;
 		}
-		if (countl == 0)
-			res[word] = malloc(sizeof(char) * countl + 1);
-		if (res[word] == NULL)
-			return (0);
-		word++;
+		if (countl > 0)
+		{
+			res[word] = malloc(countl + 1);
+			if (res[word] == NULL)
+				return (0);
+			word++;
+		}
 	}
+	res[word] = NULL;
 	return (1);
 }
 
-static int	counterc(char const *s, char c)
+// Remplit le tableau `res` avec les mots extraits de `s`
+static void	fill(char **res, const char *s, char c)
 {
 	int	i;
-	int	count;
+	int	jres;
+	int	ires;
 
 	i = 0;
-	count = 0;
+	jres = 0;
+	ires = 0;
+	while (s[i] == c)
+		i++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
-			count++;
-		i++;
+		if (s[i] == c)
+		{
+			res[ires][jres] = '\0';
+			ires++;
+			jres = 0;
+			while (s[i] == c)
+				i++;
+			continue ;
+		}
+		res[ires][jres++] = s[i++];
 	}
-	return (count + 1);
+	res[ires][jres] = '\0';
 }
 
+// Fonction principale qui sépare la chaîne `s` en mots séparés par `c`
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	int		word_count;
+	int		i;
 
-	res = malloc(sizeof(char *) * (counterc(s, c) + 1));
-	if (res == NULL || !malloc_words(res, s, c))
-		return (0);
-	fill(res, s, c);
+	i = 0;
+	if (!s)
+		return (NULL);
+	word_count = counterc(s, c);
+	res = malloc(sizeof(char *) * (word_count + 1));
+	if (res == NULL)
+		return (NULL);
+	if (!malloc_words(res, s, c))
+	{
+		while (res[i])
+		{
+			free(res[i]);
+			i++;
+		}
+		free(res);
+		return (NULL);
+	}
+	if (word_count > 0)
+		fill(res, s, c);
 	return (res);
 }
 
