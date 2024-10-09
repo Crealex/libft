@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:03:13 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 10:26:15 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:34 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i1 = 0;
 	i2 = 0;
 	result = malloc((len(s1) + len(s2) + 1) * sizeof(char));
+	if (result == NULL)
+		return (NULL);
 	while (s1[i1])
 	{
 		result[i1] = s1[i1];
@@ -47,14 +49,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i1] = '\0';
 	return (result);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	char s1[9] = "Je teste";
-	char s2 [13] = " ma fonction";
-
-	printf("result : %s\n", ft_strjoin(s1, s2));
-}
- */

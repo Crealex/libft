@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:29:19 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 17:09:44 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:26:05 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, s1 + start, len + 1);
 	return (res);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	const char text[22] = "  ., y.test de..,..  ";
-	const char set[4] = ", .";
-	printf("Test de la fonction set countfront %d et countback %d\n",
-	 countsetfront(text, set), countsetback(text, set));
-	printf("resultat : %s\n", ft_strtrim(text, set));
-}
- */

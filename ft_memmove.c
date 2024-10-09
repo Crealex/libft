@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:38:18 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/07 21:55:06 by alexandre        ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:00 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	unsigned char src[20] = "Je teste ma fonction";
-	unsigned char dest[20];
-	size_t nb = 6;
-
-	printf("Resultat : %s\n", ft_memmove(dest, src, nb));
-	printf("Resultat : %s\n", memmove(dest, src, nb));
-}
- */

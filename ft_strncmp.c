@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:06:38 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 14:47:37 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:54 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	s2u = (unsigned char)s2[i];
 	return (s1u - s2u);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-	const char s1[8] = "test\200";
-	const char s2[8] = "test\0";
-	size_t nb;
-
-	nb = 6;
-
-	printf("Retour fonction officiel : %d\n", strncmp(s1, s2, nb));
-	printf("Retour fonction maison : %d\n", ft_strncmp(s1, s2, nb));
-} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 14:31:19 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/07 21:08:29 by alexandre        ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:29 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-void    modify_char(unsigned int i, char *c)
-{
-	if (i >= 0 )
-    	*c -= 32;
-}
-
-#include <stdio.h>
-
-int main()
-{
-    char str[] = "hello";
-    ft_striteri(str, modify_char);
-    printf("%s\n", str);
-    return 0;
-}
- */

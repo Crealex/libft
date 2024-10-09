@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:23:49 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 10:16:18 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:38 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (result);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	const char src[15] = " ma fonction  ";
-	char dest[20] = "Je teste";
-	const char src2[15] = " ma fonction  ";
-	char dest2[20] = "Je teste";
-	size_t nb = 20;
-	printf("la valeur retournee par la fonction officiel est : %lu\n",
-	 strlcat(dest, src, nb));
-	printf("La chaine copie est : %s\n", dest);
-	printf("la valeur retournee par la fonction maison est : %lu\n",
-	 ft_strlcat(dest2, src2, nb));
-	printf("La chaine copie est : %s\n", dest2);
-} */

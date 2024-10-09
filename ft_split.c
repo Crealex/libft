@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
+/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:34:06 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 22:52:04 by alexandre        ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:19 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Compte le nombre de mots dans la chaîne `s` séparés par le délimiteur `c`
 static int	counterc(char const *s, char c)
 {
 	int	count;
@@ -34,7 +33,6 @@ static int	counterc(char const *s, char c)
 	return (count);
 }
 
-// Alloue la mémoire pour chaque mot trouvé dans la chaîne `s`
 static int	malloc_words(char **res, const char *s, char c)
 {
 	int	word;
@@ -56,16 +54,14 @@ static int	malloc_words(char **res, const char *s, char c)
 		if (countl > 0)
 		{
 			res[word] = malloc(countl + 1);
-			if (res[word] == NULL)
+			if (!res[word++])
 				return (0);
-			word++;
 		}
 	}
 	res[word] = NULL;
 	return (1);
 }
 
-// Remplit le tableau `res` avec les mots extraits de `s`
 static void	fill(char **res, const char *s, char c)
 {
 	int	i;
@@ -90,10 +86,10 @@ static void	fill(char **res, const char *s, char c)
 		}
 		res[ires][jres++] = s[i++];
 	}
-	res[ires][jres] = '\0';
+	if (ires < counterc(s, c))
+		res[ires][jres] = '\0';
 }
 
-// Fonction principale qui sépare la chaîne `s` en mots séparés par `c`
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -121,21 +117,3 @@ char	**ft_split(char const *s, char c)
 		fill(res, s, c);
 	return (res);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	char *text = ",,jeteste,,afo,ncti,on,";
-	char sep = ',';
-	char **res = ft_split(text, sep);
-
-	printf("Premiere phrase : %s\n", res[0]);
-	printf("Deuxieme phrase : %s\n", res[1]);
-	printf("Troisieme phrase : %s\n", res[2]);
-	printf("Quatrieme phrase : %s\n", res[3]);
-	printf("Derniere phrase : %s\n", res[4]);
-
-}
- */

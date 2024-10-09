@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:53:24 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 11:36:01 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:24:54 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const unsigned char	*tempsrc;
 
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	tempdest = dst;
 	tempsrc = src;
 	while (i < n)
@@ -28,21 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-	unsigned char dest[20];
-	const unsigned char src[26] = "zyxwvutsrqponmlkjihgfedcba";
-	size_t nb =14;
-	unsigned int tabsrc[6] = {69, 70, 71, 72, 73, 74};
-	unsigned int tabdst[6];
-
-	printf("le resultat : %s\n", ft_memcpy(dest, src, nb));
-	printf("le resultat : %s\n", memcpy(dest, src, nb));
-	printf("le resultat : %s\n", ft_memcpy(tabdst, tabsrc, nb));
-	printf("le resultat : %s\n", memcpy(tabdst, tabsrc, nb));
-}
- */

@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 11:31:41 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 10:13:22 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:26 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,3 @@ char	*ft_strdup(const char *s1)
 	result[i] = '\0';
 	return (result);
 }
-
-/* #include <string.h>
-#include <stdio.h>
-
-int main()
-{
-	char src[20] = "test de la fonction";
-
-	printf("La fonction officielle retourne : %s\n", strdup(src));
-	printf("La fonction maison retourne : %s\n", ft_strdup(src));
-}
- */

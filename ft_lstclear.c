@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:57:57 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/08 10:33:20 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 13:02:06 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (!lst || !del)
 		return ;
-	while ((*lst)->next != NULL)
+	while (*lst != NULL)
 	{
 		temp = (*lst)->next;
 		ft_lstdelone(*lst, del);

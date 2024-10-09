@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 17:21:20 by atomasi           #+#    #+#             */
-/*   Updated: 2024/10/03 10:57:54 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:23:47 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * malus);
 }
-
-/* #include <stdlib.h>
-#include <stdio.h>
-
-int main()
-{
-	char *text = "-21474836489";
-
-	printf("Test de la fonction officielle : %d\n", atoi(text));
-	printf("Test de la fonction maison : %d\n", ft_atoi(text));
-}
- */
