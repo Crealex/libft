@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 23:25:47 by alexandre         #+#    #+#             */
-/*   Updated: 2024/10/09 14:66:27 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/11/07 19:10:46 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h> // Pour faire des tests
+# include "ft_printf.h"
 
 typedef struct s_list
 {
