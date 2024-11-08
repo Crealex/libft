@@ -6,7 +6,7 @@
 /*   By: atomasi <atomasi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:40:38 by atomasi           #+#    #+#             */
-/*   Updated: 2024/11/07 11:23:12 by atomasi          ###   ########.fr       */
+/*   Updated: 2024/11/08 13:58:54 by atomasi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!lst || !f || !del)
 		return (NULL);
 	newlist = NULL;
+	new_content = NULL;
 	while (lst != NULL)
 	{
-		temp = f(lst->content);
+		new_content = f(lst->content);
 		node = ft_lstnew(new_content);
 		if (!node)
 		{
