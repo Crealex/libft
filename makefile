@@ -30,23 +30,24 @@ AR		= ar rcs
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
+	@${AR} ${NAME} ${OBJS}
 
 ${OBJDIR}/%.o: %.c | ${OBJDIR}
-	${CC} ${CFLAGS} -c -o $@ $<
+	@echo "\033[1m\033[38;5;55m  COMPILING..."
+	@${CC} ${CFLAGS} -c -o $@ $<
 
 ${OBJDIR}:
-	mkdir -p ${OBJDIR}
+	@mkdir -p ${OBJDIR}
 
 clean:
-	rm -rf ${OBJDIR}
+	@rm -rf ${OBJDIR}
 
 fclean:	clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re:	fclean all
 
 bonus: ${OBJSB} ${OBJS}
-	${AR} ${NAME} ${OBJSB} ${OBJS}
+	@${AR} ${NAME} ${OBJSB} ${OBJS}
 
 .PHONY: all clean fclean re
