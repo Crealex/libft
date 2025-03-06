@@ -16,6 +16,8 @@ int	ft_atoi(const char *str)
 	int	malus;
 	int	res;
 
+    if (!str)
+        return (0);
 	i = 0;
 	malus = 1;
 	res = 0;
